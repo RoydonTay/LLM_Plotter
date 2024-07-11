@@ -25,8 +25,8 @@ database= "DB_DEV"
 schema = "TEST_SCHEMA"
 warehouse = "COMPUTE_VWH"
 role = "DATA_SCIENTIST"
-user = 'ROYDON_USEC'
-password = 'Ilovemoney888!'
+user = st.secrets['snowflake']['user']
+password = st.secrets['snowflake']['password']
 
 # Modify in the connect_to_db function to access the tables from the snowflake schema
 snowflake_url = f"snowflake://{user}:{password}@{snowflake_account}/{database}/{schema}?warehouse={warehouse}&role={role}"
